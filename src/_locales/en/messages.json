@@ -1,0 +1,7 @@
+{
+  "pluginDesc": {"message": "a side bar note for web page can be quick use"},
+  "noteInputPlaceholder": {"message": "take a quick note here(markdown available)"},
+  "underConstruction": {"message":  "more function is under construction... PR or feature request is welcome here."},
+  "moreInfoAboutTheCrx": {"message":  "more information can be found at this page:"},
+  "noteTreeLabel": {"message":  "Tree of Notes"}
+}

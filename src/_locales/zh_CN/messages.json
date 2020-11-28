@@ -1,0 +1,7 @@
+{
+  "pluginDesc": {"message": "一个web页面快速侧边栏笔记插件"},
+  "noteInputPlaceholder": {"message":  "在此笔记(支持markdown)"},
+  "underConstruction": {"message":  "更多的功能正在开发中... 欢迎提出需求或PR。"},
+  "moreInfoAboutTheCrx": {"message":  "更多信息在这里："},
+  "noteTreeLabel": {"message":  "笔记树形图"}
+}
