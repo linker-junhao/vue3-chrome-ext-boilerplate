@@ -7,6 +7,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const el = document.createElement('nav')
-el.setAttribute('class', 'web-note-quickly-box')
+el.setAttribute('class', 'app')
 document.body.appendChild(el)
 createApp(contentScript).mount(el)
