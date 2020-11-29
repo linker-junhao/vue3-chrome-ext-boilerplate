@@ -38,7 +38,7 @@ const base = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          extractCSS: !isDev
+          extractCSS: true
         },
       },
       // 它会应用到普通的 `.css` 文件
@@ -46,7 +46,7 @@ const base = {
       {
         test: /\.css$/,
         use: [
-          isDev ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           'css-loader',
         ],
       },
@@ -66,6 +66,9 @@ const base = {
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { from: pathResolve('src/assets'), to: 'assets' },
@@ -96,12 +99,6 @@ if(isDev) {
       background: 'background',
       extensionPage: 'popup',
       options: 'options'
-    })
-  )
-} else {
-  base.plugins.push(
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
     })
   )
 }
