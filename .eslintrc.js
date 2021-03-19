@@ -1,29 +1,35 @@
 module.exports = {
-  root: true,
   env: {
-    'node': true,
-    'browser': true
+    browser: true,
+    es2021: true
   },
   extends: [
-    'plugin:vue/vue3-recommended',
-    'eslint:recommended'
+    'plugin:vue/essential',
+    'airbnb-base'
   ],
   parserOptions: {
-    parser: 'babel-eslint',
+    ecmaVersion: 12,
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module'
   },
+  plugins: [
+    'vue',
+    '@typescript-eslint'
+  ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'vue/no-deprecated-scope-attribute': 'error',
-    'vue/no-deprecated-slot-attribute': 'off',
-    'vue/no-deprecated-slot-scope-attribute': 'error',
-    'vue/no-irregular-whitespace': 'error',
-    'vue/no-reserved-component-names': 'error',
-    'vue/script-indent': 'error',
-    'indent': [
+    'comma-dangle': ['error', 'never'],
+    'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
+    'no-param-reassign': ['error', { props: false }],
+    indent: [
       'error',
       2
     ],
-    'quotes': ['error', 'single']
+    quotes: ['error', 'single'],
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
+    semi: ['error', 'always', { omitLastInOneLineBlock: true }],
+    'no-unused-vars': 'off',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error']
   }
 };

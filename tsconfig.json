@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    // 这样就可以对 `this` 上的数据属性进行更严格的推断`
+    "strict": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "typeRoots": [
+      "./src/components/drag-drop"
+    ]
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.vue",
+    "./example/**/*.ts",
+    "./example/**/*.tsx",
+    "./example/**/*.vue",
+    "./tests/**/*.ts",
+    "./tests/**/*.tsx"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}
