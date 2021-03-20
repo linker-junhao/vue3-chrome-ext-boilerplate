@@ -19,7 +19,7 @@
       "scripthost"
     ],
     "typeRoots": [
-      "./src/components/drag-drop"
+      "./node_modules/@types"
     ]
   },
   "include": [
